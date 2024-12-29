@@ -1,0 +1,139 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+body::before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top-heading, .top-para {
+    color: var(--color-white);
+    text-align: center;
+    line-height: 1.2;
+}
+.top-heading {
+    margin-top: 40px;
+    font-size: 2rem;
+}
+.top-para {
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+.outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+.survey-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    max-width: 720px; 
+    height: auto; 
+    background: var(--color-darkblue-alpha);
+    border-radius: 10px; 
+    line-height: 2;
+    color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px; 
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.survey-form input:not([type="radio"]),select,button{
+    width: 100%; 
+    padding: 8px; 
+    margin: 5px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+textarea {
+    width: 100%;
+    height: 5rem;
+}
+
+button {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: white; 
+    cursor: pointer;
+}
+
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px; 
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-green); 
+}
+
+.radio-item input[type="radio"] {
+    margin-right: 10px; 
+    width: 20px;
+    height: 20px;
+    accent-color: blue; 
+}
+
+
+.survey-form input[placeholder] {
+    font-size: 1rem;
+}
