@@ -82,7 +82,7 @@ label {
     margin-bottom: 0.5rem;
 }
 
-.survey-form input:not([type="radio"]),select,button{
+.survey-form input:not([type="radio"]),select{
     width: 100%; 
     padding: 8px; 
     margin: 5px 0; 
@@ -97,6 +97,10 @@ textarea {
 }
 
 button {
+    width: 100%; 
+    padding: 8px; 
+    margin: 5px 0; 
+    box-sizing: border-box; 
     background-color: var(--color-green);
     color: var(--color-white);
     font-size: 1rem;
@@ -133,6 +137,7 @@ button {
     height: 20px;
     accent-color: blue; 
 }
+
 @media (min-width: 480px) {
     form {
       padding: 2.5rem;
@@ -151,7 +156,6 @@ button {
       max-width: 720px;
     }
 }
-
 .survey-form input[placeholder] {
     font-size: 1rem;
 }
